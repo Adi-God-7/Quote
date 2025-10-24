@@ -1,0 +1,10 @@
+.loki-beam {
+  position: fixed;      /* Full screen background */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;          /* Behind content */
+  pointer-events: none; /* Clicks pass through */
+  background: #000;     /* Dark background to enhance glow */
+}

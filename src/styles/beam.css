@@ -1,0 +1,83 @@
+.loki-beam {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.8;
+  mix-blend-mode: screen;
+  filter: blur(3px);
+}
+
+/* Add a darker background for better beam visibility */
+body {
+  background: linear-gradient(135deg, #090a1a 0%, #171a3a 100%);
+}
+
+/* Enhance the glow effect around beams */
+.loki-beam::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(139, 92, 246, 0.05) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* Update the background to be darker for better beam visibility */
+body {
+  background: linear-gradient(135deg, #0a0a14 0%, #1a1a2e 100%);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Add a subtle noise texture */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.15;
+  z-index: 1;
+}
+
+/* Adjust card styles for better contrast with the beam */
+.quote-card {
+  background: rgba(23, 25, 35, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.quote-card:hover {
+  background: rgba(23, 25, 35, 0.8);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+/* Add subtle glow to text */
+.home h1 {
+  text-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+}
+
+/* Enhance navbar for better visibility */
+.navbar {
+  background: rgba(23, 25, 35, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
