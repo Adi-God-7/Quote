@@ -38,9 +38,9 @@ A modern, interactive web application to explore, add, and manage quotes.
 
 ## **Screenshots**
 
-![Home Page](https://via.placeholder.com/800x400?text=Home+Page+Quote+of+the+Moment)  
-![All Quotes](https://via.placeholder.com/800x400?text=All+Quotes+Page)  
-![Add Quote](https://via.placeholder.com/800x400?text=Add+Quote+Form)
+![Home Page](Home.png)  
+![All Quotes](Quotes.png)  
+![Add Quote](AddQuote.png)
 
 ---
 
